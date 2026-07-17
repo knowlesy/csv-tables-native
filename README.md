@@ -69,52 +69,21 @@ To work on this extension:
 
 ## Security
 
-This repository is continuously monitored for security vulnerabilities:
+This extension is built with modern security best practices in mind:
+- **Strict Content Security Policy (CSP)**: The webview is heavily locked down to prevent unauthorized scripts, styles, or resources from loading.
+- **XSS Prevention**: CSV data is never directly injected into HTML. It is safely passed to the frontend via the VS Code `postMessage` API and parsed internally, eliminating Cross-Site Scripting (XSS) risks.
+- **Dependency Minimization**: The extension uses a lightweight dependency tree and is bundled using `esbuild` to reduce the attack surface.
 
-- 🛡️ **Automated virus scanning** with ClamAV
-- 🔍 **Dependency vulnerability checks** with npm audit
-- 🔒 **Secret detection** to prevent credential leaks  
-- 📊 **Static code analysis** with GitHub CodeQL
-- 🏷️ **License compliance** monitoring
-- 🔗 **Supply chain security** validation
+## CI/CD Pipeline
 
-Security scans run automatically on every push. View the latest [Build Status](https://github.com/knowlesy/csv-table-viewer/actions/workflows/ci.yml).
+This project uses GitHub Actions for continuous integration:
+- **Every push to main** triggers an automated build and test pipeline.
+- **Type Checking & Tests**: The TypeScript code is compiled and the internal CSV parser is rigorously tested using `vitest` (100% test coverage).
+- **Automated VSIX Packaging**: A production-ready `.vsix` extension file is automatically packaged by the pipeline on every successful run.
 
 ## License
 
 This extension is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Release Process
-
-This project uses automated semantic versioning and releases:
-
-### 🚀 **Automatic Releases**
-- **Every push to main** triggers version analysis
-- **Semantic versioning** based on commit messages
-- **Automated VSIX packaging** and GitHub releases
-- **Security scans** run before each release
-
-### 📝 **Commit Message Format**
-Use [Conventional Commits](https://www.conventionalcommits.org/) for automatic versioning:
-
-```
-feat: add new search functionality        # Minor version bump
-fix: resolve table rendering issue        # Patch version bump
-feat!: change API structure              # Major version bump
-docs: update README                      # No version bump
-```
-
-### 🔖 **Version Bumping**
-- `feat:` → Minor version (0.1.0 → 0.2.0)
-- `fix:` → Patch version (0.1.0 → 0.1.1) 
-- `BREAKING CHANGE` or `!` → Major version (0.1.0 → 1.0.0)
-
-### 📦 **Manual Release**
-```bash
-npm run release:patch    # 0.1.0 → 0.1.1
-npm run release:minor    # 0.1.0 → 0.2.0
-npm run release:major    # 0.1.0 → 1.0.0
-```
 
 ## Contributing
 
