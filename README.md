@@ -1,6 +1,6 @@
 # CSV Table Viewer Extension
 
-[![Build Status](https://github.com/knowlesy/csv-table-viewer/actions/workflows/ci.yml/badge.svg)](https://github.com/knowlesy/csv-table-viewer/actions/workflows/ci.yml)
+[![Build Status](https://github.com/knowlesy/csv-tables-native/actions/workflows/ci.yml/badge.svg)](https://github.com/knowlesy/csv-tables-native/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![VS Code Marketplace](https://img.shields.io/badge/VS_Marketplace-Extension-blue?logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=knowlesy.csv-viewer-native)
 
