@@ -1,0 +1,81 @@
+{
+  "name": "csv-table-viewer",
+  "displayName": "CSV Table Viewer",
+  "description": "Display CSV files in a table format within VS Code",
+  "version": "0.0.1",
+  "publisher": "knowlesy",
+  "license": "MIT",
+  "author": {
+    "name": "Peter Knowles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/knowlesy/csv-table-viewer"
+  },
+  "icon": "icon.jpg",
+  "bugs": {
+    "url": "https://github.com/knowlesy/csv-table-viewer/issues"
+  },
+  "homepage": "https://github.com/knowlesy/csv-table-viewer#readme",
+  "keywords": [
+    "csv",
+    "table",
+    "viewer",
+    "data",
+    "spreadsheet"
+  ],
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCustomEditor:csvTableViewer.csvEditor"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "csvTableViewer.csvEditor",
+        "displayName": "CSV Table Viewer",
+        "selector": [
+          {
+            "filenamePattern": "*.csv"
+          }
+        ],
+        "priority": "option"
+      }
+    ],
+    "commands": [
+      {
+        "command": "csvTableViewer.openCsvTable",
+        "title": "Open as Table",
+        "category": "CSV"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "csvTableViewer.openCsvTable",
+          "when": "resourceExtname == .csv",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "package": "node esbuild.js --production"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/vscode": "^1.74.0",
+    "@vitest/coverage-v8": "^4.1.10",
+    "esbuild": "^0.28.1",
+    "typescript": "^4.9.4",
+    "vitest": "^4.1.10"
+  }
+}
