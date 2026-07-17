@@ -1,6 +1,6 @@
 {
-  "name": "csv-tables-native",
-  "displayName": "CSV Table Viewer",
+  "name": "csv-viewer-native",
+  "displayName": "CSV Viewer Native",
   "description": "Display CSV files in a table format within VS Code",
   "version": "0.0.1",
   "publisher": "knowlesy",
@@ -10,13 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/knowlesy/csv-tables-native"
+    "url": "https://github.com/knowlesy/csv-table-viewer"
   },
   "icon": "icon.jpg",
   "bugs": {
-    "url": "https://github.com/knowlesy/csv-tables-native/issues"
+    "url": "https://github.com/knowlesy/csv-table-viewer/issues"
   },
-  "homepage": "https://github.com/knowlesy/csv-tables-native#readme",
+  "homepage": "https://github.com/knowlesy/csv-table-viewer#readme",
   "keywords": [
     "csv",
     "table",
@@ -31,14 +31,14 @@
     "Other"
   ],
   "activationEvents": [
-    "onCustomEditor:csvTablesNative.csvEditor"
+    "onCustomEditor:csvViewerNative.csvEditor"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "customEditors": [
       {
-        "viewType": "csvTablesNative.csvEditor",
-        "displayName": "CSV Table Viewer",
+        "viewType": "csvViewerNative.csvEditor",
+        "displayName": "CSV Viewer Native",
         "selector": [
           {
             "filenamePattern": "*.csv"
@@ -49,7 +49,7 @@
     ],
     "commands": [
       {
-        "command": "csvTablesNative.openCsvTable",
+        "command": "csvViewerNative.openCsvTable",
         "title": "Open as Table",
         "category": "CSV"
       }
@@ -57,7 +57,7 @@
     "menus": {
       "explorer/context": [
         {
-          "command": "csvTablesNative.openCsvTable",
+          "command": "csvViewerNative.openCsvTable",
           "when": "resourceExtname == .csv",
           "group": "navigation"
         }

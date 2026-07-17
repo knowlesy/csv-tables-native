@@ -1,8 +1,8 @@
 # CSV Table Viewer Extension
 
-[![Build Status](https://github.com/knowlesy/csv-tables-native/actions/workflows/ci.yml/badge.svg)](https://github.com/knowlesy/csv-tables-native/actions/workflows/ci.yml)
+[![Build Status](https://github.com/knowlesy/csv-table-viewer/actions/workflows/ci.yml/badge.svg)](https://github.com/knowlesy/csv-table-viewer/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![VS Code Marketplace](https://img.shields.io/badge/VS_Marketplace-Extension-blue?logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=knowlesy.csv-tables-native)
+[![VS Code Marketplace](https://img.shields.io/badge/VS_Marketplace-Extension-blue?logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=knowlesy.csv-viewer-native)
 
 A Visual Studio Code extension that displays CSV files in a beautiful, interactive table format.
 
@@ -78,7 +78,7 @@ This repository is continuously monitored for security vulnerabilities:
 - 🏷️ **License compliance** monitoring
 - 🔗 **Supply chain security** validation
 
-Security scans run automatically on every push. View the latest [Build Status](https://github.com/knowlesy/csv-tables-native/actions/workflows/ci.yml).
+Security scans run automatically on every push. View the latest [Build Status](https://github.com/knowlesy/csv-table-viewer/actions/workflows/ci.yml).
 
 ## License
 

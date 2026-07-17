@@ -6,7 +6,7 @@ export function activate(context: vscode.ExtensionContext) {
     const provider = new CsvEditorProvider(context);
     
     const customEditorProviderRegistration = vscode.window.registerCustomEditorProvider(
-        'csvTablesNative.csvEditor',
+        'csvViewerNative.csvEditor',
         provider,
         {
             webviewOptions: {
@@ -17,8 +17,8 @@ export function activate(context: vscode.ExtensionContext) {
     );
 
     // Register the command to open CSV as table
-    const openCsvTableCommand = vscode.commands.registerCommand('csvTablesNative.openCsvTable', (uri: vscode.Uri) => {
-        vscode.commands.executeCommand('vscode.openWith', uri, 'csvTablesNative.csvEditor');
+    const openCsvTableCommand = vscode.commands.registerCommand('csvViewerNative.openCsvTable', (uri: vscode.Uri) => {
+        vscode.commands.executeCommand('vscode.openWith', uri, 'csvViewerNative.csvEditor');
     });
 
     context.subscriptions.push(customEditorProviderRegistration, openCsvTableCommand);
