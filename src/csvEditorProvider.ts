@@ -13,7 +13,7 @@ export class CsvEditorProvider implements vscode.CustomTextEditorProvider {
         return providerRegistration;
     }
 
-    private static readonly viewType = 'csvTableViewer.csvEditor';
+    private static readonly viewType = 'csvTablesNative.csvEditor';
 
     constructor(private readonly context: vscode.ExtensionContext) {}
 

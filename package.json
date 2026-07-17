@@ -31,13 +31,13 @@
     "Other"
   ],
   "activationEvents": [
-    "onCustomEditor:csvTableViewer.csvEditor"
+    "onCustomEditor:csvTablesNative.csvEditor"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "customEditors": [
       {
-        "viewType": "csvTableViewer.csvEditor",
+        "viewType": "csvTablesNative.csvEditor",
         "displayName": "CSV Table Viewer",
         "selector": [
           {
@@ -49,7 +49,7 @@
     ],
     "commands": [
       {
-        "command": "csvTableViewer.openCsvTable",
+        "command": "csvTablesNative.openCsvTable",
         "title": "Open as Table",
         "category": "CSV"
       }
@@ -57,7 +57,7 @@
     "menus": {
       "explorer/context": [
         {
-          "command": "csvTableViewer.openCsvTable",
+          "command": "csvTablesNative.openCsvTable",
           "when": "resourceExtname == .csv",
           "group": "navigation"
         }
