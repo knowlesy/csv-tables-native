@@ -2,7 +2,7 @@
   "name": "csv-viewer-native",
   "displayName": "CSV Viewer Native",
   "description": "Display CSV files in a table format within VS Code",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "knowlesy",
   "license": "MIT",
   "author": {
